@@ -1,10 +1,6 @@
 module ApplicationHelper
-  require 'nokogiri'
-  require 'open-uri'
-
-  def links(term)  	
-    doc = Nokogiri::HTML(open('http://www.google.com/search?q=' + term))
-    # doc.css('div cite')
-    doc.css('h3.r a')
+  def links
+    doc = Nokogiri::HTML(open('http://www.google.com/search?q=data%20sets'))
+    doc.css('div cite')
   end
 end

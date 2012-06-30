@@ -1,10 +1,13 @@
 <h1>Home#index</h1>
 
-<%  links('data%20sets').each do |link|  %>
-<%=   link.content        %> <br />
+<%  links.each do |link|  %>
+<%=   link.content      %> <br />
 <%  end                   %>
 
 <hr>
 
+<%= link_to "Crawl", home_crawl_path %>!
 
+<br />
 
+<%= link_to "Data", data_path %>!
